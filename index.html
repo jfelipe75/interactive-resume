@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+        <div class="container">
+            <div class="menu-container">
+             <button class="menu-button">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+             </button>
+                <div class="menu-dropdown">
+                    <a href="#personal-summary">Personal Summary</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#hobbies">Hobbies</a>
+                    <a href="#why-hire-me">Why Hire Me!</a>
+                    <a href="#contact-me">Let's Connect</a>
+                </div>
+            <!-- Header with Name, Job Title and Contact Info -->
+            <header class="header-container">
+                </div>
+                <h1>Juan Felipe Garcia<span class="image-area"><img src="/Users/Marcy_Student/Documents/Images/resumePic1.jpeg" alt="resume picture"></span></h1>
+                <h2>Software Engineer</h2>
+                <div class="contact-info">
+                    <p>Email: jfelipegarcia23@gmail.com | <button class="linkedin-button" onclick="window.open('https://linkedin.com/in/juan-garcia-136448316', '_blank');">LinkedIn</button></p>
+                </div>
+            </header>
+    
+            <!-- Professional Summary -->
+            <section class="summary">
+                <h2 id="personal-summary" class="section-title">Personal Summary</h2>
+                <p class="section-content" value="false"></p>
+            </section>
+    
+            <!-- Work Experience -->
+            <section class="skills-section">
+                <h2 id="skills" class="section-title">Skills</h2>
+                <div class="skill-item" data-value="false">
+                </div>
+                <div class="skill-item" data-value="false">
+                </div>
+                <div class="skill-item" data-value="false">
+                </div>
+                <div class="skill-item" data-value="false">
+                </div>
+            </section>
+
+            <!-- Hobbies -->
+             <section class="hobbies-section">
+                <h2 id="hobbies" class="section-title" value="false">Hobbies</h2>
+                    <div class="video-grid"> 
+                        <div class="video-item">
+                             <video controls> 
+                                <source src="/Users/Marcy_Student/Downloads/piano_clip.mp4" type="video/mp4"> 
+                                Your browser does not support the video tag. 
+                            </video> 
+                            <p class="video-description">Piano</p>
+                        </div>
+                        <div class="video-item">
+                             <video controls> 
+                                <source src="/Users/Marcy_Student/Downloads/guitar_clip.mp4" type="video/mp4"> 
+                                Your browser does not support the video tag. 
+                            </video> 
+                            <p class="video-description">Guitar</p>
+                        </div> 
+                        <div class="video-item">
+                             <video controls> 
+                                <source src="/Users/Marcy_Student/Downloads/hiking_clip.mp4" type="video/mp4"> 
+                                Your browser does not support the video tag. 
+                            </video> 
+                            <p class="video-description">Hiking</p>
+                        </div>
+                         <!-- Add more video items as needed --> 
+                         <div class="video-item">
+                            <video controls> 
+                               <source src="/Users/Marcy_Student/Downloads/soccer_clip.mp4" type="video/mp4"> 
+                               Your browser does not support the video tag. 
+                           </video> 
+                           <p class="video-description">Soccer</p>
+                        </div>          
+                </div>
+            </section>
+
+            <!-- Why you should hire me -->
+             <section class="hire-me">
+                <h2 class="section-title" id="why-hire-me" value="false">Why Hire Me!</h2>
+                <button class="youtube-button" onclick="window.open('https://youtu.be/N0n0TS4Flmw?si=x6dFZ7tMJ8Ws3bAV', '_blank');"><span class="play-icon">&#9654;</span>Youtube</button>
+             </section>
+
+             <!-- Leave me a message -->
+              <section class="message-section">
+                <h2 class="section-title" id="contact-me" value="false">Let's Connect</h2>
+                <form class="contact-me-form" aria-labelledby="contact-me">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+                    <button type="submit" id="submit-button">Send Message</button>
+                </form>
+            </section>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+body {
+   background: linear-gradient(135deg, #ffffff, #e0e0e0);
+   font-family: Arial, sans-serif;
+   color:#333
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container h1 {
+    padding-right: 0px;
+    font-size: 2.5rem;
+    color: #333;
+}
+/*  Menu */
+.menu-container {
+    position: fixed;
+    top: 10px; /* Adjust the vertical position */
+    left: 10px; /* Adjust the horizontal position */
+    z-index: 1000; /* ensure it stays on top */
+} 
+.menu-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 36px; /* Button width */
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+.line {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 2px 0; 
+    border-radius: 1px;
+}
+
+/* Style for dropdown menu */
+.menu-dropdown {
+    display: none; /* hidden by default */
+    position: absolute;
+    top: 50px; /* Position it below the button */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 200px;
+}
+.menu-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.menu-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.image-area, img {
+    margin-left: 370px;
+    width: 170px; /* adjust the image's width as needed */
+    height: 220px; /* mantain aspect ration */
+    border-radius: 50%; /* makes it circular since it's a profile pic */ 
+}
+.header-container h2 {
+    text-align: left;
+    margin: 5px 0 0 0;
+    font-size: 1.2rem;
+    color: #777;
+}
+.contact-info {
+    text-align: left;
+    font-size: 1rem;
+    color: #777;
+}
+.linkedin-button {
+    background-color: #0077b5; /* LinkedIn's signature blue color */
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    
+    /* Hover Effect */
+    transition: background-color 0.3s ease;
+}
+.linkedin-button:hover {
+    background-color: #005983; /* Slightly darker shade for hover effect */
+}
+.linkedin-button:active {
+    background-color: #003f5e; /* Even darker shade for active state */
+}
+.linkedin-button:focus {
+    outline: 2px solid #005983; /* Focus outline for accessibility */
+}
+.section-title {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    color: black;
+    cursor: pointer;
+}
+.experience, .education, .skills, .certifications {
+    margin-bottom: 20px;
+}
+.experience-item, .education-item, .skill-item {
+    margin-bottom: 10px;
+}
+.experience-item h3, .education-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+.experience-item p, .education-item p {
+    margin: 5px 0;
+    color: #777;
+}
+.skills ul, .certifications ul {
+    list-style-type: none;
+    padding: 0;
+}
+.skills li, .certifications li {
+    background-color: #f1f1f1;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+/* VideoGrid */
+
+.video-grid { 
+    display: none; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */ 
+    gap: 15px; 
+    padding: 15px; 
+   
+} 
+.video-item { 
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+} 
+.video-item:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+} 
+.video-item::before { 
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.3); 
+    opacity: 0; 
+    transition: opacity 0.3s; 
+} 
+.video-item:hover::before { 
+    opacity: 1; 
+} 
+.video-item video { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+} 
+.video-item .video-title { 
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px; 
+    right: 10px; 
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-align: center; 
+    opacity: 0; 
+    transition: opacity 0.3s; 
+} 
+.video-item:hover .video-title { 
+    opacity: 1; 
+}
+.video-item {
+    display: flex;
+    flex-direction: column; /* Stack video and the text vertically */
+    align-items: center; /* Center text under the video */
+    text-align: center;
+}
+.video-item video {
+    width: 100%; /* makes video responsive */
+    border-radius: 8px; /* add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.video-description {
+    margin-top: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+/* responsive design */
+
+@media (max-width: 768px) { 
+    .video-grid { 
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */ 
+    } 
+} 
+@media (max-width: 480px) { 
+    .video-grid { 
+        grid-template-columns: 1fr; /* Single column on phones */ 
+    } 
+}
+
+/* hire me section */
+#why-hire-me {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    color: black;
+    cursor: pointer;
+}
+.youtube-button {
+    /* Button Appearance */
+    background-color: #FF0000;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.3s, box-shadow 0.3s ease;
+
+    /* Box shadow for 3D effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.youtube-button:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35); /* Deeper shadow */
+    background-color: #cc0000; /*  Darker red for hover */
+}
+.youtube-button:active {
+    transform: scale(0.95); /* Sligth compression */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.youtube-button:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+/* General container styling */
+.contact-me-form {
+    max-width: 1000px;
+    margin-top: 10px;
+    padding: 60px;
+    background-color: #f9f9f9; /* ligth background */
+    border-radius: 10px; /* Rounded corner */
+    box-shadow: 0 4px 10px rgba(0,  0,  0, 0.1); /* Subtle shadow */
+    text-align: left; /* Center the content */
+    font-family: 'Arial', sans-serif;
+}
+/* Form styling */
+.contact-me-form {
+    display: none;
+    flex-direction: column;
+    gap: 15px; /* Spacing between fields */
+}
+/* Input and Textarea fields */
+.contact-me-form input,
+.contact-me-form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* inner shadow for depth */
+    transition: border-color 0.3 ease, box-shadow 0.3 ease;
+}
+/* Focus Effect */
+.contact-me-form input:focus,
+.contact-me-form textarea:focus {
+    border-color: #0077b5; /*Highlight with LinkedIn blue */
+    box-shadow: 0 0 5px rgba(0, 119, 181, 0.3); /* Outer glow effect */
+    outline: none; /* Remove default outline */
+}
+/* Sumbit Button */
+#submit-button {
+    background-color: #0077b5;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2 ease;
+}
+/* Hover effect for submit button */
+#submit-button:hover {
+    background-color: #005983; /* Darker blue */
+    transform: translateY(-2px); /* Lift the button slightly */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* adds shadow */
+}
+/* Active State for button */
+#submit-button:active {
+    transform: translateY(0); /* Reset position */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+         .contact-me-form {
+        padding: 15px;
+    }
+    
+    .contact-me-form input,
+    .contact-me-form textarea {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    .contact-me-form button {
+        font-size: 14px;
+    }
+}
+/* Form was submitted message */
+#submission-completed {
+    color: #008000;
+}
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 20px;
+}
