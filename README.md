@@ -15,3 +15,4 @@ To Do -->
 12. make hobbies section visibility dynamic. +
 13. make an interest section with dynamic visibility.
 14. add quick navigation bar in the top left corner of the page to navigate to each section faster.
+15. why isn't my project fully available. Is it because the image and video content is stored locally in my computer? (find a fix  maybe posting them on the web linking them by their URL(Try <iframe> tag and look into its attributes)) 
